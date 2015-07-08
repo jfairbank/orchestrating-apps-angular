@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <title>Name Tag</title>
+
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="../css/font-awesome.css">
+
+  <script src="../bower_components/angular/angular.js"></script>
+  <script src="name-tag-main.js"></script>
+
+  <style>
+    body {
+      padding-top: 20px;
+    }
+  </style>
+</head>
+<body ng-controller="MyCtrl">
+  <script id="name-tag.html" type="text/ng-template">
+    <p>Hi, my name is {{name}}. I am {{age}} years old.</p>
+    <p><input type="text" ng-model="name"></p>
+    <ul>
+      <li ng-repeat="hobby in hobbies">
+        <a href="javascript:void(0)"
+           ng-click="selectHobby({ hobby: hobby })">
+          {{hobby}}
+        </a>
+      </li>
+    </ul>
+  </script>
+
+  <div class="container">
+    <div class="row">
+      <span ng-if="selectedHobby">
+        Selected Hobby: {{selectedHobby | uppercase}}
+      </span>
+      
+      <name-tag name="name" age="28" on-select-hobby="selectHobby(hobby)"></name-tag>
+    </div>
+  </div>
+</body>
+</html>

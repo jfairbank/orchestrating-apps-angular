@@ -1,7 +1,6 @@
 app.directive('imageList', function() {
   return {
-    scope: true,
-    templateUrl: 'image-list.html',
+    // ...
     link: function(scope) {
       scope.setMainImage = function(image) {
         scope.mainImage.src = image.src;

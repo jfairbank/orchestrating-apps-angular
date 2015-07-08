@@ -3,6 +3,7 @@ app.controller('ImageCtrl', function($scope) {
     return { src: src, text: text, favorited: false };
   }
 
+  $scope.mainImage = {};
   $scope.imageFavorites = [];
 
   $scope.images = [

@@ -1,0 +1,12 @@
+<script id="image-gallery.html" type="text/ng-template">
+  <main-image image="mainImage"></main-image>
+
+  <image-list
+    images="images"
+    on-set-main="setMain(image)"
+    on-favorite="favorite(image)"></image-list>
+
+  <image-favorites
+    images="imageFavorites"
+    on-unfavorite="unfavorite(image)"></image-favorites>
+</script>

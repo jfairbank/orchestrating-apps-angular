@@ -1,0 +1,6 @@
+app.controller('ImageCtrl', function($scope) {
+  // ...
+  $scope.mainImage = {};
+  $scope.imageFavorites = [];
+  // ...
+});

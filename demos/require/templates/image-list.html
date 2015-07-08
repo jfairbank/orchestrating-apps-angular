@@ -4,7 +4,7 @@
     <div class="col-xs-4 image-info" ng-repeat="image in images">
       <div class="image"
            ng-class="{favoritable: !image.favorited, favorited: image.favorited}"
-           ng-click="favorite(image)">
+           ng-click="ctrl.favorite(image)">
         <img ng-src="{{image.src}}">
       </div>
 
@@ -12,7 +12,7 @@
         {{image.text}}
       </p>
 
-      <button class="btn btn-primary btn-sm" ng-click="setMainImage(image)">
+      <button class="btn btn-primary btn-sm" ng-click="ctrl.setMainImage(image)">
         <i class="fa fa-photo"></i>
         Set Main Image
       </button>

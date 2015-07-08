@@ -1,0 +1,17 @@
+{
+	"rules": {
+		"eqeqeq": true,
+		"no-multi-spaces": 0,
+		"strict": 0,
+		"quotes": [2, "single"]
+	},
+	"env": {
+		"node": true,
+		"browser": true,
+		"jquery": true,
+    "angular": true
+	},
+	"globals": {
+		"app": true
+	}
+}

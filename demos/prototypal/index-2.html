@@ -11,10 +11,14 @@
   <script src="../bower_components/angular/angular.js"></script>
   <script src="main.js"></script>
 </head>
-<body ng-controller="ImageCtrl2">
+<body ng-controller="ImageCtrl">
   <div class="container">
-    <image-gallery></image-gallery>
-    <image-gallery></image-gallery>
+    <div ng-controller="CatImageCtrl">
+      <image-gallery></image-gallery>
+    </div>
+    <div ng-controller="NatureImageCtrl">
+      <image-gallery></image-gallery>
+    </div>
   </div>
 </body>
 </html>
