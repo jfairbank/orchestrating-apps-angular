@@ -1,8 +1,6 @@
 app.directive('imageGallery', function() {
   return {
-    scope: {
-      images: '='
-    },
+    scope: { images: '=' },
     templateUrl: 'templates/image-gallery.html',
     link: function(scope) {
       scope.$on('delegate:set:mainImage', function(e, image) {
