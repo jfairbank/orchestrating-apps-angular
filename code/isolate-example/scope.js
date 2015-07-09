@@ -1,5 +1,5 @@
 scope: {
-  age: '@age',
   name: '=',
+  age: '@age',
   selectHobby: '&onSelectHobby'
 }

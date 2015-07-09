@@ -1,0 +1,41 @@
+.image-list .image-info {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.image-list .image {
+  display: block;
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.image-list .image img {
+  width: 100%;
+}
+
+.image-list .image.favoritable {
+  cursor: pointer;
+}
+
+.image-list .image.favoritable:hover:after {
+  background: rgba(0, 0, 0, 0.75);
+  content: 'Favorite';
+  color: white;
+  display: block;
+  height: 100%;
+  padding-top: 50px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+}
+
+.image-list .image.favorited:after {
+  content: 'Favorited';
+  color: white;
+  position: absolute;
+  right: 5px;
+  text-shadow: 0 1px 1px black;
+  top: 5px;
+}

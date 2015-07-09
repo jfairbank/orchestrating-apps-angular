@@ -1,11 +1,19 @@
 app.directive('imageList', function() {
   return {
-    require: '^imageGallery',
-    scope: true,
+    scope: {
+      images: '=',
+      setMainImage: '&onSetMain',
+      triggerFavorite: '&onFavorite'
+    },
     templateUrl: 'templates/image-list.html',
     link: function(scope, el, attrs, ctrl) {
-      ctrl.setMainImage(scope.images[0]);
-      scope.ctrl = ctrl;
+      scope.setMainImage({ image: scope.images[0] });
+      scope.favorite = function(image) {
+        if (!image.favorited) {
+          image.favorited = true;
+          scope.triggerFavorite({ image: image });
+        }
+      };
     }
   };
 });

@@ -1,5 +1,5 @@
 <script id="name-tag.html" type="text/ng-template">
-  <p>Hi, my name is {{name}}</p>
+  <p>Hi, my name is {{name}}. I am {{age}} years old.</p>
   <p><input type="text" ng-model="name"></p>
   <ul>
     <li ng-repeat="hobby in hobbies">
@@ -10,10 +10,3 @@
     </li>
   </ul>
 </script>
-
-<div ng-app="app" ng-controller="MyCtrl">
-  <span ng-if="selectedHobby">
-    Selected Hobby: {{selectedHobby | uppercase}}
-  </span>
-  <name-tag name="name" age="28" on-select-hobby="selectHobby(hobby)"></name-tag>
-</div>

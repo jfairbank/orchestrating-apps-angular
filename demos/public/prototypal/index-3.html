@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <title>Prototypal</title>
+
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/font-awesome.css">
+  <link rel="stylesheet" href="main.css">
+
+  <script src="/js/angular.js"></script>
+  <script src="main.js"></script>
+</head>
+<body ng-controller="ImageCtrl">
+  <div class="container">
+    <div ng-controller="CatImageCtrl2">
+      <image-gallery></image-gallery>
+    </div>
+    <div ng-controller="NatureImageCtrl2">
+      <image-gallery></image-gallery>
+    </div>
+  </div>
+</body>
+</html>

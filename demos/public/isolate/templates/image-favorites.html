@@ -1,15 +1,18 @@
-<script id="image-favorites.html" type="text/ng-template">
+<div class="image-list">
   <h3>Favorites</h3>
+
   <h4>Favorited: {{imageFavorites.length}}</h4>
+
   <ul>
     <li ng-repeat="image in imageFavorites">
       <p>
         <img ng-src="{{image.src}}" width="40">
         {{image.text}}
-        <button ng-click="unfavorite(image)">
+        <button class="btn btn-primary btn-xs"
+                ng-click="unfavorite(image)">
           Unfavorite
         </button>
       </p>
     </li>
   </ul>
-</script>
+</div>

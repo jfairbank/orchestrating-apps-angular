@@ -1,0 +1,22 @@
+<div class="image-list">
+  <h3>Images</h3>
+  <div class="row">
+    <div class="col-xs-4 image-info" ng-repeat="image in images">
+      <div class="image"
+           ng-class="{favoritable: !image.favorited, favorited: image.favorited}"
+           ng-click="favorite(image)">
+        <img ng-src="{{image.src}}">
+      </div>
+
+      <p>
+        {{image.text}}
+      </p>
+
+      <button class="btn btn-primary btn-sm"
+              ng-click="setMainImage(image)">
+        <i class="fa fa-photo"></i>
+        Set Main Image
+      </button>
+    </div>
+  </div>
+</div>
