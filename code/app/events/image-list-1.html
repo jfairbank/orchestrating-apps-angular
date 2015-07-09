@@ -1,0 +1,12 @@
+<script id="image-list.html" type="text/ng-template">
+  <h3>Images</h3>
+  <div class="image-info" ng-repeat="image in images">
+    <div ng-click="favorite(image)">
+      <img ng-src="{{image.src}}">
+    </div>
+    <p>{{image.text}}</p>
+    <button ng-click="setMainImage(image)">
+      Set Main Image
+    </button>
+  </div>
+</script>
