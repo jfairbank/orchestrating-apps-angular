@@ -1,0 +1,30 @@
+{
+  "name": "orchestrating-apps-angular",
+  "version": "1.0.0",
+  "description": "Miscellaneous things related to \"Orchestrating Apps by Composing Angular Directives\" talk",
+  "main": "index.js",
+  "scripts": {
+    "webpack-server": "./node_modules/.bin/babel-node ./demo-app/webpack-dev-server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jfairbank/orchestrating-apps-angular.git"
+  },
+  "author": "Jeremy Fairbank <elpapapollo@gmail.com> (http://jeremyfairbank.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jfairbank/orchestrating-apps-angular/issues"
+  },
+  "homepage": "https://github.com/jfairbank/orchestrating-apps-angular#readme",
+  "devDependencies": {
+    "angular": "^1.4.7",
+    "babel-cli": "^6.1.2",
+    "babel-core": "^6.1.2",
+    "babel-loader": "^6.1.0",
+    "babel-preset-es2015": "^6.1.2",
+    "express": "^4.13.3",
+    "html-loader": "^0.3.0",
+    "webpack": "^1.12.4",
+    "webpack-dev-server": "^1.12.1"
+  }
+}

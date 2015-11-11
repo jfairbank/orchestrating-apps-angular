@@ -1,0 +1,19 @@
+<div class="image-list">
+  <h3>Favorites</h3>
+
+  <h4>Favorited: {{ctrl.imageFavorites.length}}</h4>
+
+  <ul>
+    <li ng-repeat="image in ctrl.imageFavorites">
+      <p>
+        <img ng-src="{{image.src}}" width="40">
+
+        {{image.text}}
+
+        <button class="btn btn-primary btn-xs" ng-click="ctrl.unfavorite(image)">
+          Unfavorite
+        </button>
+      </p>
+    </li>
+  </ul>
+</div>

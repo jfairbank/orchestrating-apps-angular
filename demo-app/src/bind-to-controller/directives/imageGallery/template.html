@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-xs-12">
+    <main-image image="ctrl.mainImage"></main-image>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-6">
+    <image-list
+      images="ctrl.images"
+      on-set-main="ctrl.setMain(image)"
+      on-favorite="ctrl.favorite(image)"></image-list>
+  </div>
+  <div class="col-xs-6">
+    <image-favorites
+      images="ctrl.imageFavorites"
+      on-unfavorite="ctrl.unfavorite(image)"></image-favorites>
+  </div>
+</div>
