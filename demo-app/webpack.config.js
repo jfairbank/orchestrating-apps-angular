@@ -22,7 +22,8 @@ export default {
     'isolate-scope': path.resolve(__dirname, 'src/isolate-scope/main'),
     'bind-to-controller': path.resolve(__dirname, 'src/bind-to-controller/main'),
     'prototypal-scope': path.resolve(__dirname, 'src/prototypal-scope/main'),
-    'events': path.resolve(__dirname, 'src/events/main')
+    'events': path.resolve(__dirname, 'src/events/main'),
+    'refactoring': path.resolve(__dirname, 'src/refactoring/main')
   },
 
   output: {
