@@ -14,10 +14,6 @@ export default function imageList() {
     controllerAs: 'ctrl',
 
     controller: function() {
-      this.setMainImage({
-        image: this.images[0]
-      });
-
       this.favorite = function(image) {
         if (!image.favorited) {
           image.favorited = true;

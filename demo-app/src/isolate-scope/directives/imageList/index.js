@@ -10,11 +10,7 @@ export default function imageList() {
 
     template: template,
 
-    link: function(scope, el, attrs, ctrl) {
-      scope.setMainImage({
-        image: scope.images[0]
-      });
-
+    link: function(scope) {
       scope.favorite = function(image) {
         if (!image.favorited) {
           image.favorited = true;

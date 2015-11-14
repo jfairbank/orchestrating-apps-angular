@@ -4,7 +4,7 @@
   "description": "Miscellaneous things related to \"Orchestrating Apps by Composing Angular Directives\" talk",
   "main": "index.js",
   "scripts": {
-    "webpack-server": "./node_modules/.bin/babel-node ./demo-app/webpack-dev-server.js"
+    "server": "./node_modules/.bin/babel-node ./demo-app/webpack-dev-server.js"
   },
   "repository": {
     "type": "git",

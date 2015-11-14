@@ -14,7 +14,7 @@ export default {
   },
 
   entry: {
-    dev: [
+    'dev': [
       `webpack-dev-server/client?${URL}`,
       'webpack/hot/dev-server'
     ],
@@ -23,7 +23,8 @@ export default {
     'bind-to-controller': path.resolve(__dirname, 'src/bind-to-controller/main'),
     'prototypal-scope': path.resolve(__dirname, 'src/prototypal-scope/main'),
     'events': path.resolve(__dirname, 'src/events/main'),
-    'refactoring': path.resolve(__dirname, 'src/refactoring/main')
+    'refactoring': path.resolve(__dirname, 'src/refactoring/main'),
+    'hybrid': path.resolve(__dirname, 'src/hybrid/main')
   },
 
   output: {

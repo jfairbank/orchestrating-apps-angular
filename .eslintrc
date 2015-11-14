@@ -1,17 +1,22 @@
 {
-	"rules": {
-		"eqeqeq": true,
-		"no-multi-spaces": 0,
-		"strict": 0,
-		"quotes": [2, "single"]
-	},
-	"env": {
-		"node": true,
-		"browser": true,
-		"jquery": true,
-    "angular": true
-	},
-	"globals": {
-		"app": true
-	}
+  "parser": "babel-eslint",
+  "ecmaFeatures": {
+    "modules": true,
+    "arrowFunctions": true
+  },
+  "rules": {
+    "curly": 2,
+    "eqeqeq": [2, "smart"],
+    "indent": [2, 2],
+    "no-multi-spaces": 0,
+    "no-trailing-spaces": 2,
+    "no-undef": 2,
+    "semi": [2, "always"],
+    "strict": 0,
+    "quotes": [2, "single"]
+  },
+  "env": {
+    "es6": true,
+    "browser": true
+  }
 }
