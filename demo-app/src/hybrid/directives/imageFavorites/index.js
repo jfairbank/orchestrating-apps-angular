@@ -12,7 +12,7 @@ export default function imageFavorites() {
       triggerUnfavorite: '&onUnfavorite'
     },
 
-    controller: function($scope) {
+    controller: function() {
       this.unfavorite = function(image) {
         image.favorited = false;
         this.triggerUnfavorite({ image: image });
