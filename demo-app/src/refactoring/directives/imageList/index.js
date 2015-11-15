@@ -2,26 +2,23 @@ import template from './template.html';
 
 export default function imageList() {
   return {
-    scope: {},
+    restrict: 'E',
+    template: template,
 
-    bindToController: {
+    scope: {
       images: '=',
-      setMainImage: '&onSetMain',
       triggerFavorite: '&onFavorite'
     },
 
-    template: template,
-    controllerAs: 'ctrl',
+    controller: function($scope) {
+      $scope.setMainImage = function(image) {
+        $scope.$emit('delegate:set:mainImage', image);
+      };
 
-    controller: function() {
-      this.setMainImage({
-        image: this.images[0]
-      });
-
-      this.favorite = function(image) {
+      $scope.favorite = function(image) {
         if (!image.favorited) {
           image.favorited = true;
-          this.triggerFavorite({ image: image });
+          $scope.triggerFavorite({ image: image });
         }
       };
     }

@@ -2,16 +2,16 @@ import template from './template.html';
 
 export default function imageList() {
   return {
+    restrict: 'E',
+    template: template,
     scope: {},
+    controllerAs: 'ctrl',
 
     bindToController: {
       images: '=',
       setMainImage: '&onSetMain',
       triggerFavorite: '&onFavorite'
     },
-
-    template: template,
-    controllerAs: 'ctrl',
 
     controller: function() {
       this.favorite = function(image) {

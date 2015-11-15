@@ -3,12 +3,13 @@ import template from './template.html';
 
 export default function imageGalleryApp() {
   return {
-    controller: function() {
-      this.catImages = getImages('cats');
-      this.natureImages = getImages('nature');
-    },
-
+    restrict: 'E',
     template: template,
-    controllerAs: 'ctrl'
+    scope: {},
+
+    controller: function($scope) {
+      $scope.catImages = getImages('cats');
+      $scope.natureImages = getImages('nature');
+    }
   };
 }

@@ -2,15 +2,15 @@ import template from './template.html';
 
 export default function imageFavorites() {
   return {
+    restrict: 'E',
+    template: template,
     scope: {},
+    controllerAs: 'ctrl',
 
     bindToController: {
       imageFavorites: '=images',
       triggerUnfavorite: '&onUnfavorite'
     },
-
-    template: template,
-    controllerAs: 'ctrl',
 
     controller: function() {
       this.unfavorite = function(image) {

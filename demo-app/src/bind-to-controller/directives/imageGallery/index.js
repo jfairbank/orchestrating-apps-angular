@@ -2,14 +2,14 @@ import template from './template.html';
 
 export default function imageGallery() {
   return {
+    restrict: 'E',
+    template: template,
     scope: {},
+    controllerAs: 'ctrl',
 
     bindToController: {
       images: '='
     },
-
-    template: template,
-    controllerAs: 'ctrl',
 
     controller: function() {
       this.mainImage = {};

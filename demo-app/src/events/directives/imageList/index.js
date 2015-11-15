@@ -2,14 +2,14 @@ import template from './template.html';
 
 export default function imageList() {
   return {
+    restrict: 'E',
+    template: template,
     scope: {},
+    controllerAs: 'ctrl',
 
     bindToController: {
       images: '='
     },
-
-    template: template,
-    controllerAs: 'ctrl',
 
     controller: function($scope) {
       this.setMainImage = function(image) {

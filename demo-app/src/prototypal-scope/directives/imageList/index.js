@@ -2,19 +2,19 @@ import template from './template.html';
 
 export default function imageList() {
   return {
+    restrict: 'E',
+    template: template,
     scope: true,
 
-    template: template,
-
-    link: function(scope) {
-      scope.setMainImage = function(image) {
-        scope.mainImage.src = image.src;
+    controller: function($scope) {
+      $scope.setMainImage = function(image) {
+        $scope.mainImage.src = image.src;
       };
 
-      scope.favorite = function(image) {
+      $scope.favorite = function(image) {
         if (!image.favorited) {
           image.favorited = true;
-          scope.imageFavorites.push(image);
+          $scope.imageFavorites.push(image);
         }
       };
     }

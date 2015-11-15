@@ -2,34 +2,31 @@ import template from './template.html';
 
 export default function imageGallery() {
   return {
-    scope: {},
+    restrict: 'E',
+    template: template,
 
-    bindToController: {
+    scope: {
       images: '='
     },
 
-    template: template,
-    controllerAs: 'ctrl',
+    controller: function($scope) {
+      $scope.imageFavorites = [];
 
-    controller: function() {
-      this.mainImage = {};
-      this.imageFavorites = [];
-
-      this.setMain = function(image) {
-        this.mainImage.src = image.src;
+      $scope.favorite = function(image) {
+        $scope.imageFavorites.push(image);
       };
 
-      this.favorite = function(image) {
-        this.imageFavorites.push(image);
-      };
-
-      this.unfavorite = function(image) {
-        var i = this.imageFavorites.indexOf(image);
+      $scope.unfavorite = function(image) {
+        var i = $scope.imageFavorites.indexOf(image);
 
         if (i > -1) {
-          this.imageFavorites.splice(i, 1);
+          $scope.imageFavorites.splice(i, 1);
         }
       };
+
+      $scope.$on('delegate:set:mainImage', function(e, image) {
+        $scope.$broadcast('set:mainImage', image);
+      });
     }
   };
 };

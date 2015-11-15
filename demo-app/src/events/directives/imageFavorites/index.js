@@ -2,8 +2,9 @@ import template from './template.html';
 
 export default function imageFavorites() {
   return {
-    scope: {},
+    restrict: 'E',
     template: template,
+    scope: {},
     controllerAs: 'ctrl',
 
     controller: function($scope) {

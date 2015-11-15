@@ -2,19 +2,20 @@ import template from './template.html';
 
 export default function imageList() {
   return {
+    restrict: 'E',
+    template: template,
+
     scope: {
       images: '=',
       setMainImage: '&onSetMain',
       triggerFavorite: '&onFavorite'
     },
 
-    template: template,
-
-    link: function(scope) {
-      scope.favorite = function(image) {
+    controller: function($scope) {
+      $scope.favorite = function(image) {
         if (!image.favorited) {
           image.favorited = true;
-          scope.triggerFavorite({ image: image });
+          $scope.triggerFavorite({ image: image });
         }
       };
     }

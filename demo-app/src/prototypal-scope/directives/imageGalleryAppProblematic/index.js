@@ -2,13 +2,13 @@ import template from './template.html';
 
 export default function imageGalleryAppProblematic() {
   return {
+    restrict: 'E',
+    template: template,
     scope: true,
 
-    link: function(scope) {
-      scope.mainImage = {};
-      scope.imageFavorites = [];
-    },
-
-    template: template
+    controller: function($scope) {
+      $scope.mainImage = {};
+      $scope.imageFavorites = [];
+    }
   };
 }

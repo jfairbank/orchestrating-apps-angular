@@ -2,15 +2,15 @@ import { getImages } from '../../imageService';
 
 export default function imageGalleryCatsFixed() {
   return {
+    restrict: 'E',
+    template: '<image-gallery></image-gallery>',
     scope: true,
 
-    template: '<image-gallery></image-gallery>',
+    controller: function($scope) {
+      $scope.mainImage = {};
+      $scope.imageFavorites = [];
 
-    link: function(scope) {
-      scope.mainImage = {};
-      scope.imageFavorites = [];
-
-      scope.images = getImages('cats');
+      $scope.images = getImages('cats');
     }
   };
 };

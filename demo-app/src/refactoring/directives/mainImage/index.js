@@ -2,14 +2,16 @@ import template from './template.html';
 
 export default function mainImage() {
   return {
+    restrict: 'E',
+    template: template,
     scope: {},
 
-    bindToController: {
-      mainImage: '=image'
-    },
+    controller: function($scope) {
+      $scope.mainImage = {};
 
-    template: template,
-    controllerAs: 'ctrl',
-    controller: function() {}
+      $scope.$on('set:mainImage', function(e, image) {
+        $scope.mainImage.src = image.src;
+      });
+    }
   };
 };

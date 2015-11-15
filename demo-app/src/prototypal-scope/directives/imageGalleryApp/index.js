@@ -1,12 +1,12 @@
 export default function imageGalleryApp() {
   return {
+    restrict: 'E',
+    template: '<image-gallery-cats></image-gallery-cats>',
     scope: true,
 
-    link: function(scope) {
-      scope.mainImage = {};
-      scope.imageFavorites = [];
-    },
-
-    template: '<image-gallery-cats></image-gallery-cats>'
+    controller: function($scope) {
+      $scope.mainImage = {};
+      $scope.imageFavorites = [];
+    }
   };
 }
